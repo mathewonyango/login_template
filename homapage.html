@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Example</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXGEL0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+.card {
+    margin: 20px; /* Add margin top and bottom */
+    position: fixed; /* Fixed position */
+    width: calc(50% - 40px); /* Adjusted width to fit side by side with margin */
+}
+
+.card.left {
+    left: 0; /* Position the left card on the left side */
+    background: linear-gradient(to bottom right, #FFC0CB, #ADD8E6, #FFFFFF); /* Gradient background */
+}
+
+.card.right {
+    right: 0; /* Position the right card on the right side */
+    background: linear-gradient(to bottom right, #FFC0CB, #ADD8E6, #FFFFFF); /* Gradient background */
+}
+
+</style>
+
+<body style="background-color:#D6D6D6;">
+  <div class="d-flex">
+    <div class="col-6 card left text-color:white;" style="height: 80vh; overflow: hidden;">
+        <div class="card-body">
+            <h2 class="fw-bold mb-4">Welcome to Dribbble!</h2>
+            <p class="lead">Discover a world of creativity and inspiration.</p>
+            <p>Join millions of designers and artists showcasing their work and connecting with others.</p>
+            <p>Explore trending designs, share your portfolio, and engage with a vibrant community.</p>
+            <p>Ready to get started? Sign up now and unleash your creativity!</p>
+            <div class="mt-3">
+                <p class="text-muted">Already have an account? <a href="#">Log in here</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 card right text-color:white;" style="height: 80vh; overflow: hidden;">
+        <div class="card-body">
+            <h2 class="fw-bold mb-4">Welcome Back!</h2>
+            <p class="lead">Login to your account to access all the amazing features.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width: 100%;">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 100%;">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <div class="mt-3">
+                <p class="text-muted">Not a member yet? <a href="#">Sign up now</a></p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
