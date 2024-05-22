@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-care interview</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<style>
+    /* Custom CSS */
+    .custom-text {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-072635);
+        text-align: left;
+    }
+
+    .custom-bold {
+        font: normal normal bold 14px/19px Manrope;
+        letter-spacing: 0px;
+        color: #072635;
+        text-transform: capitalize;
+        opacity: 1;
+    }
+
+    .circle-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ced4da;
+        /* Grey background color */
+        margin-right: 8px;
+    }
+
+    .ml-4 {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 0px;
+        color: #072635;
+        opacity: 1;
+    }
+
+    /* style2.css */
+
+    /* Layout Properties */
+    .position-info {
+        position: absolute;
+        top: 429px;
+        left: 1294px;
+        width: 84px;
+        height: 19px;
+    }
+
+    /* UI Properties */
+    .position-info p {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: medium;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0px;
+        color: #072635;
+        text-align: left;
+        text-transform: capitalize;
+        opacity: 1;
+    }
+
+    .list-group-item {
+        border: none;
+        /* Remove border */
+        cursor: pointer;
+        /* Change cursor to pointer */
+    }
+
+    .list-group-item:hover,
+    .list-group-item.active {
+        background-color: #01F0D0;
+        /* Change hover and active background color */
+    }
+</style>
+
+<body>
+    <div class="container" style="background-color:#f8f9fa;margin-top:2%">
+        <div class="row">
+            <div class="col rounded-pill bg-white">
+                <nav class="navbar navbar-light">
+                    <div class="row">
+                        <div class="col">
+                            <a class="nav-link" href="#">
+                                <img src="TestLogo/TestLogo.png" alt="Logo">
+                                
+                            </a>
+                        </div>
+                        <div class="col mt-2 text-end">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <img src="home_FILL0_wght300_GRAD0_opsz24/home_FILL0_wght300_GRAD0_opsz24.png" alt="overview" style="width: 20px; height: 20px; margin-right: 5px;">
+                                <span style="font-size: 12px; color: black; font-weight:;">Overview</span>
+                            </a>
+                        </div>
+                        <div class="col mt-2 text-end">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <span class="badge rounded-pill d-flex justify-content-center align-items-center" style="background-color: #01F0D0; color: black; padding: 10px;">
+                                    <img src="patient/group_FILL0_wght300_GRAD0_opsz24.png" alt="Patients" style="width: 20px; height: 20px;">
+                                    Patient
+                                </span>
+                            </a>
+                        </div>
+                        
+                        
+                        
+                        <div class="col mt-2 text-end">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <img src="shedule/calendar_today_FILL0_wght300_GRAD0_opsz24@2x.png" alt="Shedule" style="width: 20px; height: 20px; margin-right: 5px;">
+                                <span style="font-size: 12px; color: black;">Schedule</span>
+                            </a>
+                        </div>
+                        <div class="col mt-2 text-end">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <img src="chat_bubble_FILL0_wght300_GRAD0_opsz24/chat_bubble_FILL0_wght300_GRAD0_opsz24@2x.png" alt="Messages" style="width: 20px; height: 20px; margin-right: 5px;">
+                                <span style="font-size: 12px; color: black;">Messages</span>
+                            </a>
+                        </div>
+                        <div class="col mt-2 text-end">
+                            <a class="nav-link d-flex align-items-center" href="#">
+                                <img src="transaction/credit_card_FILL0_wght300_GRAD0_opsz24.png" alt="Transactions" style="width: 20px; height: 20px; margin-right: 5px;">
+                                <span style="font-size: 12px; color: black;">Transactions</span>
+                            </a>
+                        </div>
+                        
+    
+                </nav>
+            </div>
+        </div>
+        <div class="row mt-2">
+
+            <div class="list-group rounded" style="max-height: 600px; overflow-y: auto;">
+                <p class="mr-0">Patients</p>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex align-items-center" style="max-height: 80px;">
+                        <!-- Your patient content here -->
+                    </div>
+                </a>
+                <!-- More list items -->
+            </div>
+            <div class="col-6" style="background-color:white; margin-top:5%; margin-bottom:17%;">
+                <h5 class="mb-4 fw-bolder">Diagnosis History</h5>
+                <div class="card card-custom p-3" style="background-color:#F4F0FE; margin-top:5%; border-radius: 15px;">
+                    <div class="information-container d-flex">
+
+                    <div class="patient-information"style="margin-left:2%">
+                        <p class="content">Blood Pressure</p>
+                    </div>
+                    <div class="patient-information" style="margin-left:33%">
+                        Last 6 Months <i class="fas fa-chevron-down"></i> 
+                    </div>
+                    </div>
+                    <div class="chart-container" id="chartContainer">
+                        <canvas id="bloodPressureChart"></canvas>
+                        
+                    </div>
+                </div>
+            
+                <div class="row" style="margin-top: 10px;">
+                    <!-- Additional Cards -->
+                    <div class="col-md-4">
+                        <div class="card card-custom text-center mb-3" style="width:100%; background-color:#E0F3FA; padding: 15px; border-radius: 10px;">
+                            <div class="image" style="padding-top: 10px;">
+                                <img src="respiratory rate.svg" style="border-radius: 50%; width: 70px; height: 70px; background-color:white;" alt="Heart Icon">
+                                <h6 class="mt-3 mb-2">Respiratory Rate</h6>
+                                <p>20 bpm</p>
+                                <p>(Normal)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-custom text-center mb-3" style="width:100%; background-color:#FFE6E9; padding: 15px; border-radius: 10px;">
+                            <div class="image" style="padding-top: 10px;">
+                                <img src="temperature.svg" style="border-radius: 50%; width: 70px; height: 70px; background-color:white;" alt="Heart Icon">
+                                <h6 class="mt-3 mb-2">Temperature</h6>
+                                <p>98.6°F</p>
+                                <p>(Normal)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-custom text-center mb-3" style="width:100%; background-color:#FFE6F1; padding: 15px; border-radius: 10px;">
+                            <div class="image" style="padding-top: 10px;">
+                                <img src="HeartBPM.svg" style="border-radius: 50%; width: 70px; height: 70px; background-color:white;" alt="Heart Icon">
+                                <h6 class="mt-3 mb-2">Heart Rate</h6>
+                                <p>78 bpm </p>
+                                <p>(Lower than Average)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class=" col-3 align-items-stretch">
+                <div class="bg-white p-3 w-100" style="border-radius: 10px;margin-bottom:10%">
+                    <div class="text-center">
+                        <img src="https://fedskillstest.ct.digital/4.png" alt="Jessica Taylor"
+                            class="profile-pic mb-4 align-content-center"
+                            style="width: 100px; height: 100px; border-radius: 50%;">
+                        <h4 class="ml-4" id="name">Loading ...</h4>
+                    </div>
+                    <div class="mb-2"><span class="circle-icon"><i class="fas fa-calendar-alt text-white"></i></span>
+                        <span>Date of Birth</span><br><span id="dob" class="font-weight-bold"
+                            style="margin-left: 40px;">Loading ...</span>
+                    </div>
+                    <div class=" mb-2"><span class="circle-icon"><i class="fas fa-venus text-white"></i></span>
+                        <span>Gender</span><br><span id="gender" class="font-weight-bold"
+                            style="margin-left: 40px;">Loading ...</span>
+                    </div>
+                    <div class="mb-2"><span class="circle-icon"><i class="fas fa-phone-alt text-white"></i></span>
+                        <span>Contact Info</span><br><span id="phone_number" class="font-weight-bold"
+                            style="margin-left: 40px;">Loading ...</span>
+                    </div>
+                    <div class="mb-2"><span class="circle-icon"><i
+                                class="fas fa-exclamation-circle text-white"></i></span> <span>Emergency Contacts</span>
+                        <br><span id="emergency_contact" class="font-weight-bold" style="margin-left: 40px;">Loading
+                            ...</span>
+                    </div>
+                    <div><span class="circle-icon"><i class="fas fa-shield-alt text-white"></i></span> <span>Insurance
+                            Provider</span><br> <span id="insurance_type" class="font-weight-bold"
+                            style="margin-left: 40px">Loading ...
+                        </span></div>
+                    <div class="bottom-info rounded-pill"
+                        style="background-color:#01F0D0;margin-left:15%;margin-top:10%">
+                        <div class="info-content p-2">
+                            Show All Information
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <!-- Include jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Then include Bootstrap's JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
+        const username = "coalition";
+        const password = "skills-test";
+
+        const fetchData = async () => {
+            try {
+                const response = await fetch(url, {
+                    headers: {
+                        "Authorization": "Basic " + btoa(username + ":" + password)
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const users = await response.json();
+                const userList = document.querySelector('.list-group');
+
+                users.forEach(user => {
+                    // Create list item
+                    const listItem = document.createElement('a');
+                    listItem.href = "#";
+                    listItem.classList.add('list-group-item', 'list-group-item-action');
+
+                    // Create content
+                    const contentDiv = document.createElement('div');
+                    contentDiv.classList.add('d-flex', 'align-items-center');
+
+                    // Profile picture
+                    const profilePicDiv = document.createElement('div');
+                    profilePicDiv.classList.add('mr-3');
+                    const profilePicImg = document.createElement('img');
+                    profilePicImg.src = user.profile_picture;
+                    profilePicImg.alt = "Profile Picture";
+                    profilePicImg.classList.add('rounded-circle');
+                    profilePicImg.style.width = '50px';
+                    profilePicImg.style.height = '50px';
+                    profilePicDiv.appendChild(profilePicImg);
+
+                    // Name, Gender, Age
+                    const userDetailsDiv = document.createElement('div');
+                    const strong = document.createElement('strong');
+                    strong.textContent = user.name;
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = `${user.gender}, ${user.age} years`;
+                    userDetailsDiv.appendChild(strong);
+                    userDetailsDiv.appendChild(paragraph);
+
+                    // Append elements
+                    contentDiv.appendChild(profilePicDiv);
+                    contentDiv.appendChild(userDetailsDiv);
+                    listItem.appendChild(contentDiv);
+                    userList.appendChild(listItem);
+                });
+
+                // Find user with name "Jessica Taylor"
+                const jessicaTaylor = users.find(user => user.name === "Jessica Taylor");
+
+                if (jessicaTaylor) {
+                    const dobElement = document.getElementById('dob');
+                    const genderElement = document.getElementById('gender');
+                    const phoneNumberElement = document.getElementById('phone_number');
+                    const emergencyContactElement = document.getElementById('emergency_contact');
+                    const insuranceTypeElement = document.getElementById('insurance_type');
+                    const nameElement = document.getElementById('name');
+
+                    // Format the data
+                    const dateOfBirth = new Date(jessicaTaylor.date_of_birth);
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    const formattedDate = dateOfBirth.toLocaleDateString('en-US', options);
+                    const gender = jessicaTaylor.gender;
+                    const phoneNumber = jessicaTaylor.phone_number;
+                    const emergencyContact = jessicaTaylor.emergency_contact;
+                    const insuranceType = jessicaTaylor.insurance_type;
+                    const name = jessicaTaylor.name;
+
+                    // Update the innerHTML
+                    dobElement.innerHTML = formattedDate;
+                    genderElement.innerHTML = gender;
+                    phoneNumberElement.innerHTML = phoneNumber;
+                    emergencyContactElement.innerHTML = emergencyContact;
+                    insuranceTypeElement.innerHTML = insuranceType;
+                    nameElement.innerHTML = name;
+
+                    const diagnosisHistory = jessicaTaylor.diagnosis_history;
+
+                    // Sort diagnosis history by year and month
+                    diagnosisHistory.sort((a, b) => {
+                        const dateA = new Date(`${a.month} 1, ${a.year}`);
+                        const dateB = new Date(`${b.month} 1, ${b.year}`);
+                        return dateA - dateB;
+                    });
+
+                    const last6Months = diagnosisHistory.slice(-6); // Get the last 6 months
+const labels = last6Months.map(entry => {
+    // Get the abbreviated month name
+    const monthAbbreviation = entry.month.substring(0, 3);
+    return `${monthAbbreviation} ${entry.year}`;
+});
+console.log(labels);
+
+                    const systolicData = diagnosisHistory.map(entry => entry.blood_pressure.systolic.value);
+                    const diastolicData = diagnosisHistory.map(entry => entry.blood_pressure.diastolic.value);
+
+                    // Create the chart
+                    const ctx = document.getElementById('bloodPressureChart').getContext('2d');
+                    const bloodPressureChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: labels,
+                            datasets: [
+                                {
+                                    label: 'Systolic',
+                                    data: systolicData,
+                                    borderColor: '#FF6384',
+                                    fill: false
+                                },
+                                {
+                                    label: 'Diastolic',
+                                    data: diastolicData,
+                                    borderColor: '#36A2EB',
+                                    fill: false
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    console.log("User 'Jessica Taylor' not found.");
+                }
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+            }
+        };
+
+        fetchData();
+    </script>
+
+</body>
+
+</html>

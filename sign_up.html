@@ -9,7 +9,7 @@
       </head>
       <style>
         .text-gradient {
-            background: linear-gradient(to bottom right, #FFC0CB, #ADD8E6, #FFFFFF);
+            background: linear-gradient(to bottom right, #FF69B4, #5F9EA0, #D3D3D3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -23,23 +23,26 @@
         }
     </style>
 <body style="background-color:#FFFAFA">
-    <div class="form-container" style="margin-left:30%;margin-top:5%">
+        <div class="image-container"style="height:50vh;width:500px;margin-top:5%;margin-bottom:0%;overflow:hidden;position:fixed;margin-left:5%">
+            <img src="wed.jpg" alt="Sign up image" class="img-fluid"style="height:100vh">
+        </div>
+    <div class="form-container" style="margin-left:50%;margin-top:5%">
         <p class="fw-bold mb-4 lead text-gradient">Sign up for Free!</p>
-    <div class="form-group mr-2 col-6">
+    <div class="form-group mr-3 ">
         <label  for="email" class="form-lable lead font-text">Email</label>
-        <input type="email" class="form-control " id="email" placeholder="Enter Email">
+        <input type="email" class="form-control w-75 " id="email" placeholder="Enter Email">
     </div>
-    <div class="form-group mr-3 col-6">
-        <label  for="username" class="form-lable lead font-text">Username</label>
-        <input type="username" class="form-control " id="username" placeholder="Enter username">
+    <div class="form-group mr-3 ">
+        <label  for="username" class="form-lable lead font-text">Name</label>
+        <input type="username" class="form-control w-75" id="username" placeholder="Enter username">
     </div>
-    <div class="form-group mr-4 col-6">
+    <div class="form-group mr-3 ">
         <label  for="password" class="form-lable lead font-text">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter password">
+        <input type="password" class="form-control w-75" id="password" placeholder="Enter password">
     </div>
     <div class="login-container">
         <p class="text-muted lead"> Already have an account? <a href="#">login here</a></p>
 </div>
-
+    </div>
 </body>
 </html>
